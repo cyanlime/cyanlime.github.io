@@ -22,7 +22,6 @@ ul.nav {
     padding-left: 10px;
     padding-right: 10px;
     float: left;
-    /* border: 1px solid #eee; */
 }
 .nav li {
     display: inline-block;
@@ -41,6 +40,9 @@ input.search {
     background-color: rgba(255,255,255,0.125);
     border: none;
     border-radius: 3px;
+}
+input.search:focus {
+    outline: none;
 }
 p.sign {
     float: right;
@@ -69,11 +71,11 @@ p.sign a {
 }
 
 .container {
+    display: inline-block;
     padding-left: 135px;
     padding-right: 135px;
     padding-top: 20px;
     padding-bottom: 20px;
-    height: 1480px;
 }
 .left-column {
     width: 238px;
@@ -130,9 +132,8 @@ ul.user-info {
 
 .right-column {
     width: 745px;
-    height: 700px;
-    left: 400px;
-    position: absolute;
+    float: left;
+    margin-left: 25px;
 }
 ul.nav-top {
     position: static;
@@ -281,7 +282,7 @@ li.career {
     margin-left: -15px;
 }
 li.address {
-    background: url('/Users/codemeow/GitHub/StudyPython/images/d4e0a90d-06eb-44ed-b4ad-296d2d2f7e0a.jpg') left no-repeat;
+    background: url('https://wx.qq.com/cgi-bin/mmwebwx-bin/webwxgeticon?seq=667929409&username=@228522af6ee30eb20f6e86565a429fd1&skey=@crypt_c8d3dd39_50cfb8d87c4237e93bf160a72512d87f') left no-repeat;
     background-size: 13px 13px;
     padding-left: 20px;
     margin-left: -15px;
@@ -398,10 +399,8 @@ span.square.legend-most {
     display: inline-block;
     width: 735px;
     margin-left: 5px;
-
     margin-right: 5px;
     margin-top: 30px;
-    height: 550px;
 }
 .title-jump {
     float: left;
@@ -415,8 +414,8 @@ span.square.legend-most {
     border-radius: 4px;
     box-shadow: 0 3px 12px rgba(27,31,35,0.15);
     position: absolute;
-    left: 460px;
-    top: 872px;
+    left: 870px;
+    top: 965px;
     background-color: #fff;
 }
 ul.dropdown-items {
@@ -451,14 +450,27 @@ span.title {
     display: inline-block;
     float: right;
 }
+.fake-timeline-year-list {
+    width: 123px;
+    height: 123px;
+    display: none;
+    margin-left: 7px;
+    margin-top: 10px;
+}
 ul.contribute-year {
     position: static;
-    top: 90px;
-    right: 140px;
+    top: 73px;
+    right: 142px;
     list-style-type: none;
     float: right;
 }
-ul.contribute-year li {
+
+ul.fake-contribute-year {
+    list-style-type: none;
+    float: right;
+}
+
+ul.contribute-year li, ul.fake-contribute-year li {
     font-size: 12px;
     padding: 8px;
     padding-left: 15px;
@@ -473,8 +485,9 @@ span.jump button {
     font-size: 13px;
     border: transparent;
     background-color: #fff;
+    outline: none;
 }
-span.jump button:hover {
+span.jump:hover, span.jump button:hover {
     color: #0366d6;
 }
 span.select-menu-button {
@@ -488,7 +501,6 @@ span.select-menu-button {
 
 .timeline-contribute {
     width: 605px;
-    height: 120px;
 }
 span.time {
     width: 605px;
@@ -500,7 +512,7 @@ span.time {
     padding-bottom: 20px;
 }
 .contribution {
-    height: 50px;
+    display: inline-block;
 }
 img.icon {
     display: inline-block;
@@ -510,6 +522,7 @@ div.contribute-detail {
     width: 560px;
     display: inline-block;
     float: right;
+    margin-left: 13px;
 }
 a.contribute-summary-title {
     color: #586069;
@@ -553,6 +566,8 @@ img.unfold {
     padding-bottom: 8px;
 }
 button.more {
+    display: inline-block;
+    float: left;
     width: 605px;
     height: 38px;
     background: #fff;
@@ -566,14 +581,17 @@ button.more a {
     font-weight: 600;
 }
 
-ul.contribute-year li:hover, button.more:hover {
+ul.contribute-year li:hover, ul.fake-contribute-year li:hover, button.more:hover {
     background: #f2f4f5;
 }
-p.guide {
+span.guide {
+    width: 605px;
+    display: inline-block;
+    float: left;
     font-size: 12px;
     color: #586069;
 }
-p.guide a{
+span.guide a{
     color: #0366d6;
 }
 
