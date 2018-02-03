@@ -19,7 +19,6 @@ $(document).ready(function(){
     })
 })
 
-
 $(document).ready(function(){
     var d_info = $('.v-card'), st;
     var dm = $('.mini-userimg');
